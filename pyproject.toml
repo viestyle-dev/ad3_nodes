@@ -1,0 +1,23 @@
+[project]
+name = "ad3-nodes"
+version = "0.1.0"
+description = "Digilent Analog Discovery 3 (WaveForms SDK) nodes for nonoha-engine"
+requires-python = ">=3.11"
+license = { text = "Apache-2.0" }
+dependencies = ["numpy"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["ad3_nodes"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[dependency-groups]
+dev = ["pytest>=8.0"]
